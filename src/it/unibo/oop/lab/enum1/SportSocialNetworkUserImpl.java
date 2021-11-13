@@ -24,13 +24,12 @@ import it.unibo.oop.lab.socialnetwork.User;
  *            specific user type
  */
 public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUserImpl<U> {
-
     /*
      * TODO
      * 
      * add a field to keep track of the set of sports followed/done by a user
      */
-
+	Set<Sport> sportsUser;
     /**
      * Builds a new {@link SportSocialNetworkUserImpl}.
      * 
