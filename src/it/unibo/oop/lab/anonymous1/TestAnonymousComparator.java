@@ -83,6 +83,8 @@ public final class TestAnonymousComparator {
         	}
         };
         
+        Collections.sort(denzelUsers,comp);
+        
         /*
          * expected Result
          */
