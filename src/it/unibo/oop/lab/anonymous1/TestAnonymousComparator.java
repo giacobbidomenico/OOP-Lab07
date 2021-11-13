@@ -115,7 +115,9 @@ public final class TestAnonymousComparator {
          * NOTE: in order to sort a list think about a method of the utility
          * class Collections
          */
-        // TODO
+        
+        Collections.sort(rossiUsers,comp.reversed());
+        
         /*
          * expected Result
          */
