@@ -3,6 +3,8 @@
  */
 package it.unibo.oop.lab.enum1;
 
+import java.util.Set;
+import java.util.TreeSet;
 import it.unibo.oop.lab.socialnetwork.SocialNetworkUserImpl;
 import it.unibo.oop.lab.socialnetwork.User;
 
@@ -29,8 +31,10 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      * 
      * add a field to keep track of the set of sports followed/done by a user
      */
+	
 	Set<Sport> sportsUser;
-    /**
+    
+	/**
      * Builds a new {@link SportSocialNetworkUserImpl}.
      * 
      * @param name
@@ -60,6 +64,7 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      */
     public SportSocialNetworkUserImpl(final String name, final String surname, final String user, final int userAge) {
         super(name, surname, user, userAge);
+        this.sportsUser = new TreeSet<Sport>();
     }
 
     /*
