@@ -104,11 +104,21 @@ public class Sport2SocialNetworkUserImpl<U extends User> extends SocialNetworkUs
      * 
      * @return the set of individual sport this user practices/follows
      */
-    /*
-     * public Set<Sport> getIndividualSports() { return null; }
-     * 
-     * 
-     * /** Returns the set of sports which are practiced in a given place.
+    public Set<Sport> getIndividualSports() {
+    	final Set<Sport> individualSports = new TreeSet<Sport>();
+    	final var iter = this.sports.iterator();
+    	
+    	while(iter.hasNext()) {
+    		final Sport app = iter.next();
+    		if(app.isIndividualSport()) {
+    			individualSports.add(app);
+    		}
+    	}
+    	
+    	return individualSports;
+    }
+    
+    /** Returns the set of sports which are practiced in a given place.
      * 
      * @param p the place in which the sport is practiced in order to be
      * included in the resulting set
