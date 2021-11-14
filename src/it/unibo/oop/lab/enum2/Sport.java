@@ -110,4 +110,10 @@ public enum Sport {
      * 
      * Returns the string representation of a sport
      */
+	public String toString() {
+		return "Sport: [ name:" + this.nameSport
+				+ " number of players:" + this.numTeamPeople
+				+ " place:" + this.place;
+	}
+	
 }
