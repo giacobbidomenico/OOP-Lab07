@@ -125,7 +125,17 @@ public class Sport2SocialNetworkUserImpl<U extends User> extends SocialNetworkUs
      * 
      * @return the set of sport practiced in a given place
      */
-    /*
-     * public Set<Sport> getSportPracticedInPlace(Place p) { return null; }
-     */
+    public Set<Sport> getSportPracticedInPlace(Place p) { 
+    	final Set<Sport> sportInPlace = new TreeSet<>();
+    	final var iter = this.sports.iterator();
+    	
+    	while(iter.hasNext()) {
+    		final Sport s = iter.next();
+    		if(s.getPlace().equals(p)) {
+    			sportInPlace.add(s);
+    		}
+    	}
+ 
+    	return sportInPlace;
+    }
 }
