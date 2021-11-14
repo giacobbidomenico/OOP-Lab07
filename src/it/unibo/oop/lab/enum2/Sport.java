@@ -21,39 +21,46 @@ public enum Sport {
       	Basket
      */
 	 BASKET(5, "basketball", Place.INDOOR),
-     /*
+     
+	 /*
       * Volley
       */
 	 VOLLEY(6, "volleyball", Place.INDOOR),
-     /*
+     
+	 /*
       * Tennis
       */
 	 TENNIS(1, "tennis", Place.OUTDOOR),
+	 
 	 /*
 	  * Bike
       */
 	 BIKE(1, "bike", Place.OUTDOOR),
-     /*
+     
+	 /*
       * F1
       */
 	 F1(1, "formula 1", Place.OUTDOOR),
-     /*
+     
+	 /*
       * Motogp
       */
 	 MOTOGP(1, "moto gp", Place.OUTDOOR),
-     /*
+     
+	 /*
       * Soccer
       */
 	 SOCCER(11, "soccer", Place.OUTDOOR);
     
 	/*
-     * TODO
-     * 
      * [FIELDS]
      * 
      * Declare required fields
      */
-
+	private final int numTeamPeople;
+	private final String nameSport;
+	private final Place place;
+	
     /*
      * TODO
      * 
