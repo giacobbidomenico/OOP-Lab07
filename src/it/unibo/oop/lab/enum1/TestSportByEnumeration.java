@@ -38,7 +38,7 @@ public final class TestSportByEnumeration {
        System.out.println("[INSERT 3 SPORT FOR EACH USER]");
        
        /*
-        * Add to each user 2 different sports
+        * Add to each user 3 different sports
         */
        
        marioRossi.addSport(Sport.MOTOGP);
