@@ -74,17 +74,20 @@ public enum Sport {
 		this.place = place;
 	}
 	
-    /*
-     * TODO
-     * 
+    /* 
      * [METHODS] To be defined
-     * 
-     * 
+     */ 
+    
+	/* 
      * 1) public boolean isIndividualSport()
      * 
      * Must return true only if called on individual sports
-     * 
-     * 
+     */
+	public boolean isIndividualSport() {
+		return this.numTeamPeople == 1;
+	}
+	
+    /* 
      * 2) public boolean isIndoorSport()
      * 
      * Must return true in case the sport is practices indoor
