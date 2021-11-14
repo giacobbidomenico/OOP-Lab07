@@ -31,7 +31,7 @@ public class Sport2SocialNetworkUserImpl<U extends User> extends SocialNetworkUs
     /*
      * add a field to keep track of the set of sports followed/done by a user
      */
-	private final Set<U> sports;
+	private final Set<Sport> sports;
 	
     /**
      * Builds a new {@link Sport2SocialNetworkUserImpl}.
@@ -69,7 +69,8 @@ public class Sport2SocialNetworkUserImpl<U extends User> extends SocialNetworkUs
     /*
      * [METHODS] TO BE DEFINED AS DONE IN PREVIOUS EXERCISE
      */
-
+    
+    
     /**
      * Add a new sport followed by this user: if the user already likes or does
      * the sport, nothing happens.
@@ -78,7 +79,7 @@ public class Sport2SocialNetworkUserImpl<U extends User> extends SocialNetworkUs
      *            a sport followed/done by the user
      */
     public void addSport(final Sport sport) {
-
+    	this.sports.add(sport);
     }
 
     /**
