@@ -100,8 +100,12 @@ public enum Sport {
      * 3) public Place getPlace()
      * 
      * Must return the place where this sport is practiced
-     * 
-     * 
+     */
+	public Place getPlace() {
+		return this.place;
+	}
+	
+    /* 
      * 4) public String toString()
      * 
      * Returns the string representation of a sport
