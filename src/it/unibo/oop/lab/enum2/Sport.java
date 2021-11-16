@@ -17,98 +17,92 @@ package it.unibo.oop.lab.enum2;
  */
 public enum Sport {
 
-     /*
-      	Basket
+    /*
+     * Basket
      */
-	 BASKET(5, "basketball", Place.INDOOR),
-     
-	 /*
-      * Volley
-      */
-	 VOLLEY(6, "volleyball", Place.INDOOR),
-     
-	 /*
-      * Tennis
-      */
-	 TENNIS(1, "tennis", Place.OUTDOOR),
-	 
-	 /*
-	  * Bike
-      */
-	 BIKE(1, "bike", Place.OUTDOOR),
-     
-	 /*
-      * F1
-      */
-	 F1(1, "formula 1", Place.OUTDOOR),
-     
-	 /*
-      * Motogp
-      */
-	 MOTOGP(1, "moto gp", Place.OUTDOOR),
-     
-	 /*
-      * Soccer
-      */
-	 SOCCER(11, "soccer", Place.OUTDOOR);
-    
-	/*
-     * [FIELDS]
-     * 
-     * Declare required fields
+    BASKET(5, "basketball", Place.INDOOR),
+ 
+    /*
+     * Volley
      */
+    VOLLEY(6, "volleyball", Place.INDOOR),
+ 
+    /*
+     * Tennis
+     */
+    TENNIS(1, "tennis", Place.OUTDOOR),
+ 
+    /*
+     * Bike
+     */
+    BIKE(1, "bike", Place.OUTDOOR),
+ 
+    /*
+     * F1
+     */
+    F1(1, "formula 1", Place.OUTDOOR),
+ 
+    /*
+     * Motogp
+     */
+    MOTOGP(1, "moto gp", Place.OUTDOOR),
+ 
+    /*
+     * Soccer
+     */
+    SOCCER(11, "soccer", Place.OUTDOOR);
+        
 	private final int numTeamPeople;
 	private final String nameSport;
 	private final Place place;
 	
-    /*
-     * [CONSTRUCTOR]
+	/**
+     * Builds a new {@link Sport}.
      * 
-     * Define a constructor like this:
-     * 
-     * - Sport(final Place place, final int noTeamMembers, final String actualName)
+     * @param noTeamMembers
+     *            the number of people playing a sport
+     * @param actualName
+     *            the name of a sport
+     * @param place
+     *            the place where a sport is practiced
      */
 	Sport(final int noTeamMembers, final String actualName, final Place place){
 		this.numTeamPeople = noTeamMembers;
 		this.nameSport = actualName;
 		this.place = place;
 	}
-	
-    /* 
-     * [METHODS] To be defined
-     */ 
     
 	/* 
-     * 1) public boolean isIndividualSport()
-     * 
      * Must return true only if called on individual sports
+     *
+     * @return true if sport is individual, false otherwise
      */
 	public boolean isIndividualSport() {
 		return this.numTeamPeople == 1;
 	}
 	
     /* 
-     * 2) public boolean isIndoorSport()
-     * 
      * Must return true in case the sport is practices indoor
+     * 
+     * @return true if a sport is practices indoor,false otherwise
      */
 	public boolean isIndoorSport() {
 		return this.place.equals(Place.INDOOR);
 	}
 	
-    /* 
-     * 3) public Place getPlace()
-     * 
+    /*
      * Must return the place where this sport is practiced
+     * 
+     * @return the place where a sport is practiced
      */
 	public Place getPlace() {
 		return this.place;
 	}
 	
-    /* 
-     * 4) public String toString()
-     * 
+    /*
      * Returns the string representation of a sport
+     * 
+     * @return the string representation of a sport
      */
 	public String toString() {
 		return "Sport: [ name:" + this.nameSport
