@@ -26,12 +26,9 @@ import it.unibo.oop.lab.socialnetwork.User;
  *            specific user type
  */
 public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUserImpl<U> {
-    /*
-     * TODO
-     * 
+    /* 
      * add a field to keep track of the set of sports followed/done by a user
-     */
-	
+     */	
 	Set<Sport> sportsUser;
     
 	/**
@@ -67,12 +64,6 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
         this.sportsUser = new TreeSet<Sport>();
     }
 
-    /*
-     * [METHODS]
-     * 
-     * Redefine the methods below reusing the same code of previous exercise
-     */
-
     /**
      * Add a new sport followed by this user: if the user already likes or does
      * the sport, nothing happens.
@@ -80,7 +71,6 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      * @param sport
      *            a sport followed/done by the user
      */
-    // TODO
     public void addSport(final Sport sport) {
     	this.sportsUser.add(sport);
     }
