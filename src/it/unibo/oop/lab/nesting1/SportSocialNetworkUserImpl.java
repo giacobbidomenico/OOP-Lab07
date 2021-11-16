@@ -169,7 +169,7 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
         public boolean equals(final Object o) {
         	
         	if(o instanceof Sport) {
-        		if((((Sport) o).getSport()) == this.getSport()) {
+        		if((((Sport) o).getSport()).equals(this.getSport())) {
         			return true;
         		}
         	}
