@@ -65,11 +65,6 @@ public class Sport2SocialNetworkUserImpl<U extends User> extends SocialNetworkUs
         super(name, surname, user, userAge);
         this.sports = new TreeSet<>();
     }
-
-    /*
-     * [METHODS] TO BE DEFINED AS DONE IN PREVIOUS EXERCISE
-     */
-    
     
     /**
      * Add a new sport followed by this user: if the user already likes or does
@@ -93,10 +88,6 @@ public class Sport2SocialNetworkUserImpl<U extends User> extends SocialNetworkUs
     public boolean likesSport(final Sport s) {
         return this.sports.contains(s);
     }
-
-    /*
-     * [METHODS] NEW METHODS TO IMPLEMENT FROM SCRATCH
-     */
 
     /**
      * Returns the set of individual sports followed/practiced by this user: a
